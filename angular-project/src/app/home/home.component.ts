@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class HomeComponent implements OnInit {
-  Delete = false;
+  target=undefined;
   contextmenu = false;
       contextmenuX = 0;
       contextmenuY = 0;
@@ -17,16 +17,14 @@ export class HomeComponent implements OnInit {
         this.contextmenuX=event.clientX;
         this.contextmenuY=event.clientY;
         this.contextmenu=true;
-        var target = event.target || event.srcElement || event.currentTarget;
-        var idAttr = target.attributes.id;
+        this.target = /*event.target || event.srcElement || */ event.currentTarget;
       
-        console.log(idAttr);
     }
     //disables the menu
     disableContextMenu(){
       this.contextmenu= false;
     }
-  
+    
   temp:any;
   constructor(private http:HttpClient) { }
   @Input() check=true;
@@ -35,8 +33,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((data) => {
       this.temp=data;
-      this.Delete=this.check;
     });
+    
   }
   
 }

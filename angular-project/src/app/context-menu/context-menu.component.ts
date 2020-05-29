@@ -7,13 +7,19 @@ import {ShContextMenuModule} from 'ng2-right-click-menu'
   styleUrls: ['./context-menu.component.css']
 })
 export class ContextMenuComponent implements OnInit {
-  delete=false;
+  contextmenuX: any;
+  contextmenuY: any;
+  target: any;
   remove(){
-    this.delete=true;
+    this.element.remove();
+  }
+  onDetails(){
+    console.log("Helllloooo")
   }
   constructor() { }
   @Input()  x=0;
   @Input()  y=0;
+  @Input() element:any;
   ngOnInit(): void {
 
     }
