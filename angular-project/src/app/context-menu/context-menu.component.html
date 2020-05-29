@@ -1,0 +1,10 @@
+<div class="contextmenu" [ngStyle]="{'left.px': x, 'top.px': y}">
+  <div  class=" d-b list-group">
+    <div class="list-group-item list-group-item-action" >Details</div>
+    <div class="list-group-item list-group-item-action" (click)="remove()"> Delete</div>
+  </div> 
+  </div>
+  <div *ngIf="delete">
+    <app-home>[check]="delete"</app-home>
+  </div>
+  
