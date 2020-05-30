@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {ShContextMenuModule} from 'ng2-right-click-menu'
 
 @Component({
   selector: 'app-context-menu',
