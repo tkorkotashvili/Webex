@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     
   temp:any;
   constructor(private http:HttpClient) { }
-  @Input() check=true;
+  @Input()check=true;
   
 //todo
   ngOnInit(): void {

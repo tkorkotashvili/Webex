@@ -14,12 +14,14 @@ export class ContextMenuComponent implements OnInit {
     this.element.remove();
   }
   onDetails(){
-    console.log("Helllloooo")
+    let info=this.data[this.element.id]
+    console.log(info.id,info.name,info.email)
   }
   constructor() { }
   @Input()  x=0;
   @Input()  y=0;
   @Input() element:any;
+  @Input() data;
   ngOnInit(): void {
 
     }

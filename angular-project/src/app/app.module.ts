@@ -8,14 +8,16 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ContextMenuModule } from '@syncfusion/ej2-angular-navigations';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
-import {ShContextMenuModule} from 'ng2-right-click-menu'
+import {ShContextMenuModule} from 'ng2-right-click-menu';
+import { DetailsComponent } from './details/details.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     HomeComponent,
-    ContextMenuComponent
+    ContextMenuComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
