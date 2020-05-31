@@ -8,33 +8,30 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class HomeComponent implements OnInit {
+  @Input() check=true;
   target=undefined;
   contextmenu = false;
-      contextmenuX = 0;
-      contextmenuY = 0;
-      //activates the menu with the coordinates
-      onrightClick(event){
-        this.contextmenuX=event.clientX;
-        this.contextmenuY=event.clientY;
-        this.contextmenu=true;
-        this.target = /*event.target || event.srcElement || */ event.currentTarget;
-      
-    }
-    //disables the menu
-    disableContextMenu(){
-      this.contextmenu= false;
-    }
-    
+  contextmenuX = 0;
+  contextmenuY = 0;
   temp:any;
+
   constructor(private http:HttpClient) { }
-  @Input()check=true;
+  //activates the menu with the coordinates
+  onrightClick(event){
+    this.contextmenuX=event.clientX;
+    this.contextmenuY=event.clientY;
+    this.contextmenu=true;
+    this.target = /*event.target || event.srcElement || */ event.currentTarget;
   
-//todo
+  }
+//disables the menu
+  disableContextMenu(){
+  this.contextmenu= false;
+  }
+
   ngOnInit(): void {
-    this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((data) => {
+      this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((data) => {
       this.temp=data;
     });
-    
   }
-  
 }

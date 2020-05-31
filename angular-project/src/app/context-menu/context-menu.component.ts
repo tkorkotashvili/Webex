@@ -6,9 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./context-menu.component.css']
 })
 export class ContextMenuComponent implements OnInit {
+  @Input()  x=0;
+  @Input()  y=0;
+  @Input() element:any;
+  @Input() data;
   contextmenuX: any;
   contextmenuY: any;
   target: any;
+  
+  constructor() { }
+
   remove(){
     this.element.remove();
   }
@@ -16,11 +23,8 @@ export class ContextMenuComponent implements OnInit {
     let info=this.data[this.element.id]
     console.log(info.id,info.name,info.email)
   }
-  constructor() { }
-  @Input()  x=0;
-  @Input()  y=0;
-  @Input() element:any;
-  @Input() data;
+
+  
   ngOnInit(): void {
 
     }
