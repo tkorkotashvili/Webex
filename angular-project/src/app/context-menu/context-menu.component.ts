@@ -6,22 +6,23 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./context-menu.component.css']
 })
 export class ContextMenuComponent implements OnInit {
-  @Input()  x=0;
-  @Input()  y=0;
+  @Input() x=0;
+  @Input() y=0;
   @Input() element:any;
   @Input() data;
   contextmenuX: any;
   contextmenuY: any;
   target: any;
-  
+  info:any;
+  clickDetails = false;
   constructor() { }
 
   remove(){
     this.element.remove();
   }
   onDetails(){
-    let info=this.data[this.element.id]
-    console.log(info.id,info.name,info.email)
+    this.info=this.data[this.element.id];
+    this.clickDetails = true;
   }
 
   

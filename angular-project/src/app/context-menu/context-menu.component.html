@@ -1,6 +1,9 @@
 <div class="contextmenu" [ngStyle]="{'left.px': x, 'top.px': y}">
   <div  class=" d-b list-group">
-    <div class="list-group-item list-group-item-action"(click)="onDetails()" >Details</div>
+    <div class="list-group-item list-group-item-action"(clickDetails)="onDetails()" >Details</div>
     <div class="list-group-item list-group-item-action" (click)="remove()" >Delete</div>
   </div> 
+  </div>
+  <div *ngIF=(clickDetails)>
+    <app-details [details]="info"></app-details>
   </div>

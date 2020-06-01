@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   contextmenu = false;
   contextmenuX = 0;
   contextmenuY = 0;
+  
   temp:any;
 
   constructor(private http:HttpClient) { }

@@ -4,8 +4,9 @@ height: 100%;
 }
 
 .container-fluid{
-    height: 100vh ;
-    background-color: blue;
+    height: 100vh;
+    
+
 }
 .index{
     text-align: center;
@@ -27,4 +28,12 @@ border:none;
     color: white;
     font-size: 32pt;
     padding:40px;
+}
+.index-circle{
+    position: absolute;
+    top:-24px;
+    left:-24px;
+}
+.h3{
+    color:white;
 }
