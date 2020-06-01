@@ -1,0 +1,30 @@
+html,
+body {
+height: 100%;
+}
+
+.container-fluid{
+    height: 100vh ;
+    background-color: blue;
+}
+.index{
+    text-align: center;
+    color: white;
+    font-size: large;
+    padding: 8px;
+}
+.card{
+min-width: 360px;
+border:none;
+}
+.card-body{
+    background-image: url(src/assets/photos/cardBackground.jpeg);
+    background-size: cover;
+    height: 500px;
+}
+.letter{
+    text-align: center;
+    color: white;
+    font-size: 32pt;
+    padding:40px;
+}
