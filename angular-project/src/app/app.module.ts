@@ -10,6 +10,7 @@ import { ContextMenuModule } from '@syncfusion/ej2-angular-navigations';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { DetailsComponent } from './details/details.component'
 import * as common from '@angular/common';
+import { DataService } from './services/DataService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import * as common from '@angular/common';
     ContextMenuModule,
     common.CommonModule
   ],
-  providers: [],
+  providers:  [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

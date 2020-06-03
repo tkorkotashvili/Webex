@@ -23,6 +23,7 @@ const routes: Routes = [
     path: "details",
     component:DetailsComponent
   }
+  
 ];
 
 @NgModule({

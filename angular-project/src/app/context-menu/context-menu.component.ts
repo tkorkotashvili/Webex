@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../services/DataService';
 
 @Component({
   selector: 'app-context-menu',
@@ -22,7 +24,7 @@ export class ContextMenuComponent implements OnInit {
   delete=0;
 
 
-  constructor() { }
+  constructor( private router: Router,private dataService:DataService) { }
   
   remove(){
     this.element.remove();
@@ -32,11 +34,13 @@ export class ContextMenuComponent implements OnInit {
     this.clickDetails =false;
     this.info=this.data[this.element.id];
     this.clickDetails = true;
-    console.log( this.info);
     this.isElement.emit(this.element);
     this.detailEvent.emit(this.info);
-  }
-  
+    this.dataService.changeMessage(this.info);
+    this.router.navigateByUrl('details',{state: {data:this.info}});
+    // this.router.navigateByUrl('details',{state: {data:this.info}}); ეს იყოს
+
+    }
   ngOnInit(): void {
     }
   
