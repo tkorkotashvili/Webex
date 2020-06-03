@@ -1,10 +1,11 @@
+<div *ngIf="element!=undefined">{{details.name}}</div>
 <div class="container-fluid " >
     <div class="row h-100 justify-content-center align-items-center">
         <div class="card shadow p-10 mb-6 bg-white rounded" style="max-width:360px;max-height:500px;">
             <div class="card-body d-flex flex-column">
                 <div class="index-circle">
                     <div class="rounded-circle" style="height:44px;width:44px;background-color: red;">
-                        <div class="index ">1</div>
+                        <div class="index ">{{details}}</div>
                     </div>
                 </div>
                 <div class="h-100 d-flex justify-content-center">
@@ -16,8 +17,10 @@
                                 </div>
                             </div>
                             <div class="flex-grow-1 align-items-center">
-                                <h3 style="color: white;"> Leane Grahham</h3>
-                                <div style="color: white;" class="small-text text-center">Sincere@april.biz</div>
+                                <h3 style="color: white;"> {{details}}</h3>
+                                <div style="color: white;" class="small-text text-center">
+                                {{details}}
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -29,4 +32,7 @@
             </div>
         </div>
     </div>
+</div>
+
+<div hidden ><app-context-menu (detailEvent)="reciveDelete($event)"(isElement)="reciveElement($event)"></app-context-menu>
 </div>

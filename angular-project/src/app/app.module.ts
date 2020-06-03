@@ -9,7 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ContextMenuModule } from '@syncfusion/ej2-angular-navigations';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { DetailsComponent } from './details/details.component'
-
+import * as common from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import { DetailsComponent } from './details/details.component'
     AppRoutingModule,
     HttpClientModule,
     ContextMenuModule,
+    common.CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

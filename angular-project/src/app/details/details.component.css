@@ -19,7 +19,7 @@ min-width: 360px;
 border:none;
 }
 .card-body{
-    background-image: url(src/assets/photos/cardBackground.jpeg);
+    background-image:url(src/assets/photos/cardBackground.jpeg);
     background-size: cover;
     height: 500px;
 }
