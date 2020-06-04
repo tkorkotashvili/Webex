@@ -23,7 +23,7 @@ const routes: Routes = [
         component:DetailsComponent
   },
   {
-    path: "signin",
+    path: "",
     component:SignInComponent,
 
   }
