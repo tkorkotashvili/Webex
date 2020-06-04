@@ -11,6 +11,9 @@ import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { DetailsComponent } from './details/details.component'
 import * as common from '@angular/common';
 import { DataService } from './services/DataService';
+import { AuthGuardGuard } from './sign-in/auth-guard.guard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +27,11 @@ import { DataService } from './services/DataService';
     AppRoutingModule,
     HttpClientModule,
     ContextMenuModule,
-    common.CommonModule
+    common.CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers:  [DataService],
+  providers:  [DataService,AuthGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

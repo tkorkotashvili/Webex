@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { DetailsComponent } from './details/details.component';
+import { AuthGuardGuard } from './sign-in/auth-guard.guard';
 
 
 const routes: Routes = [
@@ -13,16 +14,20 @@ const routes: Routes = [
   },
   {
     path: "home",
-    component:HomeComponent
+    component:HomeComponent,
+    canActivate:[AuthGuardGuard]
+    
   },
   {
-    path: "signIn",
-    component:SignInComponent
+    path: "details/:id",
+        component:DetailsComponent
   },
   {
-    path: "details",
-    component:DetailsComponent
+    path: "signin",
+    component:SignInComponent,
+
   }
+  
   
 ];
 

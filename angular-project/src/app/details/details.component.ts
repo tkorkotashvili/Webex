@@ -28,7 +28,6 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     let details = this.dataService.currentMessage.subscribe(m=>{
-      debugger;
       this.id=m.id;
       this.name = m.name;
       this.email = m.email;

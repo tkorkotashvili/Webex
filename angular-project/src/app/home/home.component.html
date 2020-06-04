@@ -11,15 +11,13 @@
         </tr>
     </thead>
     <tbody *ngFor="let data of temp index as i" >
-        <!-- <div class="tb-rows"> -->
-            <tr (contextmenu)="onContextMenu($event)"id={{i+1}}  >
+            <tr (contextmenu)="onContextMenu($event)"id={{i}}  >
                 <td>{{data.id}}</td>
                 <td>{{data.name}}</td>
                 <td>{{data.username}}</td>
                 <td>{{data.email}}</td>
                 <td>{{data.website}}</td>
             </tr>
-        <!-- </div> -->
         
     </tbody>
 </table>

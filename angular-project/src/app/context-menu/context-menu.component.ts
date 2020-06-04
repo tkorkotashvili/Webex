@@ -37,7 +37,9 @@ export class ContextMenuComponent implements OnInit {
     this.isElement.emit(this.element);
     this.detailEvent.emit(this.info);
     this.dataService.changeMessage(this.info);
-    this.router.navigateByUrl('details',{state: {data:this.info}});
+    this.router.navigateByUrl('details'+'/'+this.info.id);
+    console.log(this.router);
+    // this.router.navigateByUrl('details',{state: {data:this.info}});
     // this.router.navigateByUrl('details',{state: {data:this.info}}); ეს იყოს
 
     }
