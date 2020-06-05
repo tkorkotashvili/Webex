@@ -9,13 +9,16 @@ import { Observable } from 'rxjs';
 export class AuthGuardGuard implements CanActivate {
 
   message:boolean;
+  
   constructor(private data: DataService){}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return this.message;
+    return true;
   }
   ngOnInit(){
+    
     this.data.currentMessage.subscribe(message=>this.message = message)
+    
   }
 }

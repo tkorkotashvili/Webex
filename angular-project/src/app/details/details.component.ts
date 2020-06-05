@@ -14,7 +14,7 @@ export class DetailsComponent implements OnInit {
   email:string;
   element:any;
   id: number;
- 
+  firstLetter:string;
   constructor(private dataService:DataService) {
   }
   reciveDelete($event){
@@ -31,6 +31,7 @@ export class DetailsComponent implements OnInit {
       this.id=m.id;
       this.name = m.name;
       this.email = m.email;
+      this.firstLetter=this.name[0];
     });
     // this.id=history.state.data.id; ესეც იყოს
     // this.name = history.state.data.name;

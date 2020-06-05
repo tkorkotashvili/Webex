@@ -18,7 +18,6 @@ export class SignInComponent implements OnInit {
     
   }
   onSubmit(){
-    debugger
     if(this.login=="admin"&&this.password=="admin"){
       this.value=true;
       this.dataService.changeMessage(this.value);
