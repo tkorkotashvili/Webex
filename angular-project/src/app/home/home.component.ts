@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   
   @Input() check : boolean =true;
   target=undefined;
-  temp$ :Observable<Data>;
+  temp$ :Observable<{}>;
   contextmenu = false;
   contextmenuX : number = 0;
   contextmenuY : number = 0;
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   //     this.temp=data;
       
   //   });
-  this.temp$=this.http.get<Data>("https://jsonplaceholder.typicode.com/users");
+  this.temp$=this.http.get<{}>("https://jsonplaceholder.typicode.com/users");
   }
 
 }
