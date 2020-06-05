@@ -8,24 +8,17 @@ import { DataService } from '../services/DataService';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  t=100;
-  details=new DetailsModel(1,"qasd","asd");
   name:string;
   email:string;
   element:any;
   id: number;
   firstLetter:string;
-  constructor(private dataService:DataService) {
-  }
-  reciveDelete($event){
-    debugger;
-    console.log("hiiiiiiiii")
-    // this.details=new DetailsModel($event.id,$event.userName,$event.userEmail);
-  }
-  reciveElement($event){
+  
+  reciveElement($event:any){
     this.element=$event;
   }
-
+  constructor(private dataService:DataService) {
+  }
   ngOnInit(): void {
     let details = this.dataService.currentMessage.subscribe(m=>{
       this.id=m.id;
