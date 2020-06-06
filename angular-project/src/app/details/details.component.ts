@@ -27,7 +27,6 @@ export class DetailsComponent implements OnInit {
   constructor(private route:ActivatedRoute,private http:HttpClient) {
   }
   ngOnInit(): void {
-    
     this.personId =this.route.snapshot.paramMap.get('id');
     this.person$=this.http.get('https://jsonplaceholder.typicode.com/users/'+this.personId).pipe(share());
       // this.id=m.id;

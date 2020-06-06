@@ -22,10 +22,12 @@ export class SignInComponent implements OnInit {
       this.value=true;
       this.dataService.changeMessage(this.value);
       this.router.navigateByUrl('home');
+     
     }
     else{
       this.value=false;
       this.dataService.changeMessage(this.value);
+      
     }
   }
   constructor( private router :Router, private dataService:DataService) { }

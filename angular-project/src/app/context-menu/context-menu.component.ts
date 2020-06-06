@@ -14,14 +14,11 @@ export class ContextMenuComponent implements OnInit {
   @Input() y=0;
   @Input() element:any;
   @Input() data;
-  @Output() detailEvent = new EventEmitter<any>();
-  @Output() isElement = new EventEmitter<any>();
-  contextmenuX: any;
-  contextmenuY: any;
-  target: any;
+    // @Output() detailEvent = new EventEmitter<any>();
+    // @Output() isElement = new EventEmitter<any>();
+  contextmenuX: number;
+  contextmenuY: number;
   info:any;
-  clickDetails = true;
-  delete=0;
 
 
   constructor( private router: Router,private dataService:DataService) { }
@@ -31,12 +28,12 @@ export class ContextMenuComponent implements OnInit {
   } 
 
   onDetails(){
-    this.clickDetails =false;
+   
     this.info=this.data[this.element.id];
-    this.clickDetails = true;
-    this.isElement.emit(this.element);
-    this.detailEvent.emit(this.info);
-    this.dataService.changeMessage(this.info);
+    // this.clickDetails = true;
+    // this.isElement.emit(this.element);
+    // this.detailEvent.emit(this.info);
+    // this.dataService.changeMessage(this.info);
     this.router.navigateByUrl('details'+'/'+this.info.id);
     console.log(this.router);
     // this.router.navigateByUrl('details',{state: {data:this.info}});
