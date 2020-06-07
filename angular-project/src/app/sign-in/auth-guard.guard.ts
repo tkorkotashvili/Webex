@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { DataService } from '../services/DataService';
-
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuardGuard implements CanActivate {
 
-  message=true;
+  message:boolean;
   
   constructor(private data: DataService){}
   canActivate(
@@ -17,8 +16,6 @@ export class AuthGuardGuard implements CanActivate {
     return this.message;
   }
   ngOnInit(){
-    debugger
-    this.data.currentMessage.subscribe(message => this.message = message)
-    
+    this.data.currentMessage.subscribe(message => this.message = message);
   }
 }

@@ -9,7 +9,8 @@ export class DataService{
     currentMessage = this.dataSource.asObservable();
     constructor() { }
   
-    changeMessage(message:any) {
+    changeMessage(message:boolean) {
+    
       this.dataSource.next(message);
     }
 

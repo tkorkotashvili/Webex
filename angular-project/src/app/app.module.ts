@@ -12,7 +12,7 @@ import { DetailsComponent } from './details/details.component'
 import * as common from '@angular/common';
 import { DataService } from './services/DataService';
 import { AuthGuardGuard } from './sign-in/auth-guard.guard';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 
 @NgModule({
   declarations: [
