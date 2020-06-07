@@ -13,6 +13,7 @@ import * as common from '@angular/common';
 import { DataService } from './services/DataService';
 import { AuthGuardGuard } from './sign-in/auth-guard.guard';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
     ContextMenuModule,
     common.CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers:  [DataService,AuthGuardGuard],
   bootstrap: [AppComponent]

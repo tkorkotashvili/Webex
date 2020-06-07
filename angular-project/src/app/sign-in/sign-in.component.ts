@@ -18,39 +18,18 @@ export class SignInComponent implements OnInit {
     password : new FormControl('',Validators.required)
   })
   
-  //  value:boolean;
-  // // onUpdateLogin(event:any){
-  //   this.login=event.target.value;
-  // }
-  // onUpdatePassword(event:any){
-  //   this.password=event.target.value;
-    
-  // }
   onSubmit(){
-    this.guard=true;
+    debugger;
     this.loginValue=(this.form.value.login);
     this.passValue=(this.form.value.password);
-    debugger
-    if (this.loginValue=="admin"&&this.passValue=="admin"){
-      
-      this.dataService.changeMessage(this.guard);
-  
-      this.router.navigateByUrl('home');
+    if (this.loginValue=="admin" && this.passValue=="admin"){
+      localStorage.setItem("token","admin");
+      debugger
+      this.router.navigate(["home"]);
     }
     else{
       this.error=true;
     }
-    
-    // if(this.login=="admin"&&this.form.value.login.password==="admin"){
-    //   this.value;
-    //   
-    //  
-    // }
-    // else{
-    //   this.value=false;
-    //   this.dataService.changeMessage(this.value);
-      
-    // }
   }
   constructor( private router :Router, private dataService:DataService) { }
 

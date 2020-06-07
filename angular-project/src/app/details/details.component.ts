@@ -29,14 +29,6 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.personId =this.route.snapshot.paramMap.get('id');
     this.person$=this.http.get('https://jsonplaceholder.typicode.com/users/'+this.personId).pipe(share());
-      // this.id=m.id;
-      // this.name = m.name;
-      // this.email = m.email;
-      // this.firstLetter=this.name[0];
-    // });
-    // this.id=history.state.data.id; ესეც იყოს
-    // this.name = history.state.data.name;
-    // this.email = history.state.data.email;
   }
 
 }

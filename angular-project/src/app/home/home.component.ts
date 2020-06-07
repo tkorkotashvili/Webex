@@ -17,12 +17,10 @@ export class HomeComponent implements OnInit {
   contextmenu = false;
   contextmenuX : number = 0;
   contextmenuY : number = 0;
-  // temp:any;
 
   constructor(private http:HttpClient) { }
 
 
-  //activates the menu with the coordinates
   onContextMenu(event){
     this.contextmenuX=event.clientX;
     this.contextmenuY=event.clientY;
@@ -31,16 +29,11 @@ export class HomeComponent implements OnInit {
     
   }
 
-//disables the menu
   disableContextMenu(){
   this.contextmenu= false;
   }
   
   ngOnInit(): void {
-  //     this.http.get("https://jsonplaceholder.typicode.com/users").subscribe((data) => {
-  //     this.temp=data;
-      
-  //   });
   this.temp$=this.http.get<{}>("https://jsonplaceholder.typicode.com/users");
   }
 
